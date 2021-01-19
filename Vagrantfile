@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
   end
 
   # prometheus / grafana / node_exporter
-  config.vm.define vm_name="grafana" do |node|
+  config.vm.define vm_name="monitoring" do |node|
     node.vm.box = "apopa/bionic64"
     node.vm.hostname = vm_name
     node.vm.network "public_network", ip: "192.168.178.55", bridge: "en7: Dell Universal Dock D6000"
